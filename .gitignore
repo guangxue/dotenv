@@ -18,8 +18,5 @@
 go.work
 
 # Go application configurations attributes
-*.attributes
-*.properties
-/logs/
-/build/
 .env
+dotenv_test.go
