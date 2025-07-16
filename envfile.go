@@ -10,8 +10,8 @@ import (
 )
 
 var (
-	quoted    = regexp.MustCompile(`([a-zA-Z_0-9]+=\"[^\"]*\")`)
-	nonQuoted = regexp.MustCompile(`([a-zA-Z_0-9]+=[a-zA-Z_0-9]+[\s|\n])`)
+	quoted    = regexp.MustCompile(`([a-zA-Z_0-9\.]+=\"[^\"]*\")`)
+	nonQuoted = regexp.MustCompile(`([a-zA-Z_0-9\.]+=[a-zA-Z_0-9]+[\s|\n])`)
 	cmdExpr   = regexp.MustCompile(`(\$\(\w+\))`)
 )
 
