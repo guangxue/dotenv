@@ -28,6 +28,18 @@ func main() {
 
 	flag.Parse()
 
+	if len(flag.Args()) == 0 {
+		fmt.Println("dotenv is tool for .env encryption and save to .env.vault")
+		fmt.Println("Usage:")
+		fmt.Println("\tdotenv <command> [argument]")
+		fmt.Println("The commands are:")
+		fmt.Println("\tencrypt \tNo flags provided: encrypt .env and save to .env.valut for default behaviour")
+		fmt.Println("encrypt .env and save to different file:")
+		fmt.Println("\tdotenv encrypt -o .secretKeys")
+		fmt.Println("encrypt .env and ignore extra files besides .env:")
+		fmt.Println("\tdotenv encrypt -i .secretKeys .log")
+		return
+	}
 	// sub-command name: flag.Args[0]
 	subCmdName := flag.Args()[0]
 	restArgsOfSubCmd := flag.Args()[1:]
